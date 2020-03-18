@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package atm_csd321;
+
+package DreamTeam_ATM;
 
 import java.util.Scanner;
 
 /**
- *
- * @author HaiAu
+ * Lake Washington Institute of Technology ATM Machine
+ * DreamTeam 
  */
 public class Keypad {
 

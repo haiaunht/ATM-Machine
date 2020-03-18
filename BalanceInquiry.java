@@ -1,31 +1,26 @@
 
-package atm_csd321;
+package DreamTeam_ATM;
 
 /**
- *
- * @author HaiAu
+ * Lake Washington Institute of Technology ATM Machine
+ * DreamTeam 
  */
 public class BalanceInquiry extends Transaction {
-
-    private double availableBalance;
-    private double totalBalance;
     
+    //BalanceInquiry constructor initialize attributes
     public BalanceInquiry( int currentAccountNumber, Screen screen, BankDatabase bankDatabase){
         super( currentAccountNumber, screen, bankDatabase );      
     }
 
+    //implement abstract method of parent Transaction class
     @Override
     public void execute() {
-        //available and total balance will call superclass Transaction methods
-        //getBankDatabase() get available and total amount 
-        availableBalance = getBankDatabase().getAvailableBalance(getAccountNumber());
-        totalBalance = getBankDatabase().getTotalBalance(getAccountNumber());
-        
         //calling supperclass getScreen() method to display the available and total balance
         getScreen().displayMessageLine("Balance information: ");
         getScreen().displayMessage("\t+ Available balance: ");
-        getScreen().displayDollarAmount(availableBalance);
+        getScreen().displayDollarAmount(getBankDatabase().getAvailableBalance(getAccountNumber()));
         getScreen().displayMessage("\n\t+ Total balance: ");
-        getScreen().displayDollarAmount(totalBalance);
+        getScreen().displayDollarAmount(getBankDatabase().getTotalBalance(getAccountNumber()));
+        getScreen().displayMessageLine("");
     }
 }
