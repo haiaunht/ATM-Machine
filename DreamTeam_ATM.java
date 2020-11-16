@@ -3,7 +3,7 @@ package DreamTeam_ATM;
 
 /** 
  * Lake Washington Institute of Technology ATM Machine
- * DreamTeam 
+ * Hai-Au Bui
  */
 public class DreamTeam_ATM {
 
